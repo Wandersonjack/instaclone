@@ -14,3 +14,8 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+
+## This project was built with educational purpose 
+- Sign up and login page with form validation and using google firebase to auth user with email and address
+- Creating home that contains the app pages such as feed_screen, post, profile,edit profile.
