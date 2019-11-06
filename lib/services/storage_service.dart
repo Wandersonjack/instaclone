@@ -40,4 +40,20 @@ class StorageService {
     );
     return compressImageFile;
   }
+
+  //uploading photo to post
+  static Future<String> uploadPost(File imageFile) async {
+    String photoId = Uuid().v4();
+    File image = await compressImage(photoId, imageFile);
+
+    StorageUploadTask uploadTask = storageRef
+        .child('image/post/post_$photoId.jpg')
+        .putFile(image);
+    StorageTaskSnapshot storageSnap = await uploadTask.onComplete;
+
+    String downloadUrl = await storageSnap.ref.getDownloadURL();
+    return downloadUrl;
+
+  }
+
 }

@@ -23,8 +23,7 @@ class User {
       name: doc['name'],
       email: doc['email'],
       profileImageUrl: doc['profileImageUrl'],
-      bio: doc['bio'] ??
-          '', //?? to check if the bio has info if not return an empty string
+      bio: doc['bio'] ?? '',                                                    //?? to check if the bio has info if not return an empty string
     );
   }
 }

@@ -15,7 +15,8 @@ class MyApp extends StatelessWidget {
       stream: FirebaseAuth.instance.onAuthStateChanged,                         //to listen to firebase authentication
       builder: (BuildContext context, snapshot) {
         if (snapshot.hasData) {
-          return HomeScreen(userId: snapshot.data.uid);
+          //Provider.of<UserData>(context).currentUserId = snapshot.data.uid;
+          return HomeScreen(userId: snapshot.data.uid);//remove the reference of user id from the parameter
         } else {
           return LoginScreen();
         }

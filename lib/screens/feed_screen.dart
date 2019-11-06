@@ -13,6 +13,17 @@ class _FeedScreenState extends State<FeedScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.green,
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        title: Text(
+          "Instagram",
+          style: TextStyle(
+            color: Colors.black87,
+            fontFamily: 'Billabong',
+            fontSize: 35.0,
+          ),
+        ),
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

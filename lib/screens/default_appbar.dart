@@ -1,15 +1,9 @@
 import 'package:flutter/material.dart';
 
-class ActivityScreen extends StatefulWidget {
-  @override
-  _ActivityScreenState createState() => _ActivityScreenState();
-}
-
-class _ActivityScreenState extends State<ActivityScreen> {
+class DefaultAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.green,
       appBar: AppBar(
         backgroundColor: Colors.white,
         title: Text(

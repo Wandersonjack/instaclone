@@ -1,7 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:instagrammm/models/users_model.dart';
-import 'package:instagrammm/screens/edit_user_profile.dart';
+import 'package:instagrammm/screens/default_appbar.dart';
+import 'package:instagrammm/screens/edit_profile_screen.dart';
 import 'package:instagrammm/utilities/constants.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -19,6 +20,17 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        title: Text(
+          "Instagram",
+          style: TextStyle(
+            color: Colors.black87,
+            fontFamily: 'Billabong',
+            fontSize: 35.0,
+          ),
+        ),
+      ),
       body: FutureBuilder(
         future:  usersRef.document(widget.userId).get(), //getting the userRef from factory inside de model accessing via widget
         builder:(BuildContext context, AsyncSnapshot snapshot) {
